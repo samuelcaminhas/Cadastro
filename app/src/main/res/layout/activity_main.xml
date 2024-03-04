@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/mainTb"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#824CE3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cadastroTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTb"
+        app:layout_constraintEnd_toEndOf="@+id/mainTb"
+        app:layout_constraintStart_toStartOf="@+id/mainTb"
+        app:layout_constraintTop_toTopOf="@+id/mainTb" />
+
+    <TextView
+        android:id="@+id/nomeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Completo"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTb" />
+
+    <EditText
+        android:id="@+id/nomeEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeTv" />
+
+    <TextView
+        android:id="@+id/telefoneTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeEt" />
+
+    <EditText
+        android:id="@+id/telefoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneTv" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneEt" />
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTv" />
+
+    <CheckBox
+        android:id="@+id/emailCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/emailEt"
+        android:text="Deseja receber novidades por email?" />
+
+    <TextView
+        android:id="@+id/sexoTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sexo"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailCb" />
+    <RadioGroup
+        android:id="@+id/sexoRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexoTv">
+        <RadioButton
+            android:id="@+id/masculinoRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:checked="true"
+            app:layout_constraintStart_toEndOf="@+id/femininoRb"
+            app:layout_constraintTop_toBottomOf="@id/sexoRg"/>
+        <RadioButton
+            android:id="@+id/femininoRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            app:layout_constraintTop_toBottomOf="@id/sexoRg"/>
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/cidadeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cidade"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexoRg" />
+
+    <EditText
+        android:id="@+id/cidadeEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cidadeTv" />
+
+    <TextView
+        android:id="@+id/ufTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UF"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cidadeEt" />
+    <Spinner
+        android:id="@+id/ufSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/uf"
+        android:padding="5sp"
+        app:layout_constraintTop_toBottomOf="@+id/ufTv"
+        app:layout_constraintStart_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/cadastrarBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ufSp" />
+
+    <Button
+        android:id="@+id/limparBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limpar Campos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrarBt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
