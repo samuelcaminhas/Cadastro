@@ -80,8 +80,10 @@
         android:id="@+id/emailCb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Deseja receber novidades por email?"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEt"
-        android:text="Deseja receber novidades por email?" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/sexoTv"
